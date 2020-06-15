@@ -28,7 +28,7 @@ def fetch_hubble_image(id):
     url = f"https:{response.json()['image_files'][-1]['file_url']}"
     filename = f"hubble_{id}.{url.split('.')[-1]}"
     download_picture(url, filename)
-    change_for_Instagram(filename)
+    change_for_instagram(filename)
 
 def fetch_hubble_collection(collection):
     response = requests.get(f"http://hubblesite.org/api/v3/images/{collection}")

@@ -27,7 +27,7 @@ def fetch_spacex_last_launch():
     for id, url in enumerate(urls):
         filename = f"spacex_{id}.{url.split('.')[-1]}"
         download_picture(url, filename)
-        change_for_Instagram(filename)
+        change_for_instagram(filename)
 
 if __name__ == "__main__":
     os.makedirs("images", exist_ok=True)
